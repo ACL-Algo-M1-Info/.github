@@ -70,7 +70,6 @@ typedef struct _MonType
     
     /** Fin */
     int fin;
-    
 } MonType;
 
 // Entête des fonctions publiques (si un main est dans le même fichier source, ou si fichier header)
@@ -166,7 +165,6 @@ typedef struct _MonType
     
     /** Fin */
     int fin;
-    
 } MonType;
 
 // Définition de classe dans les fichiers header (une seule par fichier)
