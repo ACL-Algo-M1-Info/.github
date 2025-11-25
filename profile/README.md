@@ -215,7 +215,7 @@ int main(int argc, char *argv[])
     t.debut = 0;
     t.fin = 1;
     
-    printf("Ecart type : %d", calculerEcart(&t));
+    cout << "Ecart type : %d", calculerEcart(&t) << endl;
 
     return 0;
 }
