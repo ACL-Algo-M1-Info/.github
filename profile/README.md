@@ -218,6 +218,9 @@ public:
     
 private:
 
+    /**
+     * Le traitement est important
+     */
     void _traitementImportant() const
     {
         cout << "ça ne fait rien du tout" << endl;
@@ -365,6 +368,9 @@ public class MaClasse extends AutreClasse
 
     // METHODES METIER
 
+    /**
+     * Le traitement est important
+     */
     private void _traitementImportant()
     {
         System.out.println("ça ne fait rien du tout");
