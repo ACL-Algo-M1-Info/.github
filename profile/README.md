@@ -37,12 +37,27 @@ Les changements les plus notables sont:
 // Macros, defines, ...
 #define EX 50
 
-// Constantes littérales
+// Constantes littérales. Attention, la définition se fait dans les .c
 
 /** C'est la valeur de la vie askip... */
 const int VALEUR = 42;
 
-// Structures dans les fichiers header
+// Enumérations dans les fichiers header (une seule par fichier)
+// Avec un typedef. L'enum est aussi nommée et doit avoir le nom correspondant au type défini préfixé par un "_"
+
+/**
+  * Niveau de joie de vivre
+  */
+typedef enum _MonEnum
+{
+    /** Valeur 1 */
+    VALEUR_1,
+    
+    /** Valeur 2 */
+    VALEUR_2 = 4,
+} MonEnum;
+
+// Structures dans les fichiers header (une seule par fichier)
 // Avec un typedef. La structure est aussi nommée et doit avoir le nom correspondant au type défini préfixé par un "_"
 
 /**
@@ -118,12 +133,27 @@ void _fonctionPrivee()
 using namespace std;
 namespace s = std;
 
-// Constantes littérales
+// Constantes littérales. Attention, la définition se fait dans les .cpp
 
 /** C'est la valeur de la vie askip... */
 const int VALEUR = 42;
 
-// Structures dans les fichiers header
+// Enumérations dans les fichiers header (une seule par fichier)
+// Avec un typedef. L'enum est aussi nommée et doit avoir le nom correspondant au type défini préfixé par un "_"
+
+/**
+  * Niveau de joie de vivre
+  */
+typedef enum _MonEnum
+{
+    /** Valeur 1 */
+    VALEUR_1,
+    
+    /** Valeur 2 */
+    VALEUR_2 = 4,
+} MonEnum;
+
+// Structures dans les fichiers header (une seule par fichier)
 // Avec un typedef. La structure est aussi nommée et doit avoir le nom correspondant au type défini préfixé par un "_"
 
 /**
@@ -139,7 +169,7 @@ typedef struct _MonType
     
 } MonType;
 
-// Définition de classes dans les fichiers header
+// Définition de classe dans les fichiers header (une seule par fichier)
 
 /**
   * Ma superble classe super belle
@@ -239,4 +269,110 @@ void _fonctionPrivee()
 
 <details>
 <summary>Structure d'un fichier Java</summary>
+
+```java
+// Package
+
+package MaRacine.MonPackage;
+
+// Les clauses import
+
+import Java.lang.String;
+
+// Les énumérations classiques (une seule par fichier)
+
+/**
+ * Mon énumération
+ */
+public enum MonEnum
+{
+    /** Constante rouge */
+    RED(1),
+    
+    /** Constante vert */
+    GREEN(2),
+    
+    /** Constante bleu */
+    BLUE(4);
+    
+    // VIARBALES STATIQUES
+    
+    /** Valeur portée par l'enum */
+    private final int valeur;
+    
+    // CONSTRUCTEUR
+
+    /**
+     * Initialise l'enum
+     * @param valeur Valeur à mettre
+     */
+    public MonEnum(int valeur)
+    {
+        this.valeur = valeur;
+    }
+    
+    // GETTERS / SETTERS
+    
+    public int getValeur()
+    {
+        return this.valeur;
+    }
+    
+    // METHODES METIER
+}
+
+// Défintion d'une classe (une seule par fichier)
+
+/**
+ * Superbe classe
+ */
+public class MaClasse extends AutreClasse
+{
+    // CONSTANTES
+    
+    /** Cool c'est PI */
+    public final static int PI = 3.141592;
+
+    // VARIABLES
+
+    /** Champ important !! */
+    private int _monChampPrive;
+
+    public int monChampPublic;
+
+    // SIGNAUX (pattern observable)
+
+    // CONSTRUCTEUR / DESTRUCTEUR
+
+    /**
+     * Construit l'objet
+     * @param monChampPrive Champ privé
+     * @param monChampPublic Champ public
+     */
+    public MaClasse(int monChampPrive, int monChampPublic)
+    {
+        this._monChampPrive = monChampPrive;
+        this.monChampPublic = monChampPublic;
+    }
+
+    // GETTERS / SETTERS
+
+    /**
+     * Obtention du champ privé
+     */
+    public int getMonChampPrive()
+    {
+        return this._monChampPrive;
+    }
+
+    // METHODES METIER
+
+    private void _traitementImportant()
+    {
+        System.out.println("ça ne fait rien du tout");
+    }
+
+    // CALLBACKS (pattern observable)
+}
+```
 </details>
