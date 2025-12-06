@@ -18,7 +18,8 @@ Les changements les plus notables sont:
 8. Dans une classe, l'usage de `this` est obligatoire,
 8. En C, les structures sont wrappées dans une définition de type, et sont également nommées (en plus du type),
 9. En C, Aucun typedef par pointeur,
-10. Les identifiants sont en français.
+10. Les identifiants sont en français,
+11. Les sections d'un fichier doivent être représentées par un titre en majuscule (`// STRUCTURES`, `// FONCTIONS`) au pluriel.
 
 ### Exemples
 
