@@ -32,17 +32,28 @@ Les changements les plus notables sont:
 // Si fichier header, liste les pragmas. Le pragma à mettre est
 #pragma once
 
+// INCLUSIONS
+
 // Inclusions
 #include <stdio.h>
 #include <math.h>
 
+// Les inclusions de librairies externes (non système) sont à faire après les inclusions système.
+#include "maLib.h"
+
+// DEFINES
+
 // Macros, defines, ...
 #define EX 50
+
+// CONSTANTES
 
 // Constantes littérales. Attention, la définition se fait dans les .c
 
 /** C'est la valeur de la vie askip... */
 const int VALEUR = 42;
+
+// ENUMERATIONS
 
 // Enumérations dans les fichiers header (une seule par fichier)
 // Avec un typedef. L'enum est aussi nommée et doit avoir le nom correspondant au type défini préfixé par un "_"
@@ -59,6 +70,8 @@ typedef enum _MonEnum
     VALEUR_2 = 4,
 } MonEnum;
 
+// STRUCTURES
+
 // Structures dans les fichiers header (une seule par fichier)
 // Avec un typedef. La structure est aussi nommée et doit avoir le nom correspondant au type défini préfixé par un "_"
 
@@ -73,6 +86,8 @@ typedef struct _MonType
     /** Fin */
     int fin;
 } MonType;
+
+// FONCTIONS
 
 // Entête des fonctions publiques (si un main est dans le même fichier source, ou si fichier header)
 
@@ -122,17 +137,28 @@ void _fonctionPrivee()
 // Si fichier header, liste les pragmas. Le pragma à mettre est
 #pragma once
 
+// INCLUSIONS
+
 // Inclusions
 #include <iostream>
 #include <string>
 
+// Les inclusions de librairies externes (non système) sont à faire après les inclusions système.
+#include "maLib.h"
+
+// DEFINES
+
 // Macros, defines, ...
 #define EX 50
+
+// NAMESPACES
 
 // Clauses using et aliases
 
 using namespace std;
 namespace s = std;
+
+// CONSTANTES
 
 // Constantes littérales. Attention, la définition se fait dans les .cpp
 
@@ -141,6 +167,8 @@ const int VALEUR = 42;
 
 // Enumérations dans les fichiers header (une seule par fichier)
 // Avec un typedef. L'enum est aussi nommée et doit avoir le nom correspondant au type défini préfixé par un "_"
+
+// ENUMERATIONS
 
 /**
   * Niveau de joie de vivre
@@ -153,6 +181,8 @@ typedef enum _MonEnum
     /** Valeur 2 */
     VALEUR_2 = 4,
 } MonEnum;
+
+// STRUCTURES
 
 // Structures dans les fichiers header (une seule par fichier)
 // Avec un typedef. La structure est aussi nommée et doit avoir le nom correspondant au type défini préfixé par un "_"
@@ -168,6 +198,8 @@ typedef struct _MonType
     /** Fin */
     int fin;
 } MonType;
+
+// CLASSES
 
 // Définition de classe dans les fichiers header (une seule par fichier)
 
@@ -230,6 +262,8 @@ private:
     
     // CALLBACKS (pattern observable)
 };
+
+// FONCTIONS
 
 // Entête des fonctions publiques (si un main est dans le même fichier source, ou si fichier header)
 
