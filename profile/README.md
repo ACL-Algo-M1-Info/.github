@@ -9,7 +9,7 @@ Les changements les plus notables sont:
 
 1. Les identifiants sont en `camelCase`,
 2. Il faut respecter l'ordre de définition des éléments dans un fichier (selon le langage),
-3. Les accolades vont à la ligne lors de l'ouverture de blocs:
+3. Les accolades vont à la ligne lors de l'ouverture de blocs,
 4. Les classes ont une documentation,
 5. Les méthodes ont une documentation détaillant chaque variable et le retour,
 6. Les variables peuvent être documentées, si jugé nécessaire,
@@ -17,7 +17,8 @@ Les changements les plus notables sont:
 7. Dans une classe, les champs privés sont préfixés par `_`,
 8. Dans une classe, l'usage de `this` est obligatoire,
 8. En C, les structures sont wrappées dans une définition de type, et sont également nommées (en plus du type),
-9. En C, Aucun typedef par pointeur.
+9. En C, Aucun typedef par pointeur,
+10. Les identifiants sont en français.
 
 ### Exemples
 
